@@ -134,8 +134,34 @@ begin
     Result := TypeInfo(TThemedTaskDialog)
   else if TypeName = 'teTextStyle' then
     Result := TypeInfo(TThemedTextStyle)
+  else if TypeName = 'teCategoryButtons' then
+    Result := TypeInfo(TThemedCategoryButtons)
+  else if TypeName = 'teCategoryPanelGroup' then
+    Result := TypeInfo(TThemedCategoryPanelGroup)
+  else if TypeName = 'teCheckListBox' then
+    Result := TypeInfo(TThemedCheckListBox)
+  else if TypeName = 'teControlBar' then
+    Result := TypeInfo(TThemedControlBar)
+  else if TypeName = 'teDataNavButtons' then
+    Result := TypeInfo(TThemedDataNavButtons)
+  else if TypeName = 'teGrid' then
+    Result := TypeInfo(TThemedGrid)
+  else if TypeName = 'teHint' then
+    Result := TypeInfo(TThemedHint)
+  else if TypeName = 'tePanel' then
+    Result := TypeInfo(TThemedPanel)
+  else if TypeName = 'teTabSet' then
+    Result := TypeInfo(TThemedTabSet)
+  else if TypeName = 'teTextLabel' then
+    Result := TypeInfo(TThemedTextLabel)
+  else if TypeName = 'teMPlayerButtons' then
+    Result := TypeInfo(TThemedMPlayerButtons)
+  else if TypeName = 'teToggleSwitch' then
+    Result := TypeInfo(TThemedToggleSwitch)
+  else if TypeName = 'teSearchIndicators' then
+    Result := TypeInfo(TThemedSearchIndicators)
   {$ENDIF}
-    else
+  else
     Result := nil;
 end;
 
@@ -169,7 +195,7 @@ begin
     Result := ThemeServices.GetElementDetails(TThemedSpin(Element))
   else if TypeName = 'teStartPanel' then 
     Result := ThemeServices.GetElementDetails(TThemedStartPanel(Element))
-  else if TypeName = 'teStatus' then  
+  else if TypeName = 'teStatus' then
     Result := ThemeServices.GetElementDetails(TThemedStatus(Element))
   else if TypeName = 'teTab' then
     Result := ThemeServices.GetElementDetails(TThemedTab(Element))
@@ -206,6 +232,32 @@ begin
     Result := ThemeServices.GetElementDetails(TThemedTaskDialog(Element))
   else if TypeName = 'teTextStyle' then
     Result := ThemeServices.GetElementDetails(TThemedTextStyle(Element))
+  else if TypeName = 'teCategoryButtons' then
+    Result := ThemeServices.GetElementDetails(TThemedCategoryButtons(Element))
+  else if TypeName = 'teCategoryPanelGroup' then
+    Result := ThemeServices.GetElementDetails(TThemedCategoryPanelGroup(Element))
+  else if TypeName = 'teCheckListBox' then
+    Result := ThemeServices.GetElementDetails(TThemedCheckListBox(Element))
+  else if TypeName = 'teControlBar' then
+    Result := ThemeServices.GetElementDetails(TThemedControlBar(Element))
+  else if TypeName = 'teDataNavButtons' then
+    Result := ThemeServices.GetElementDetails(TThemedDataNavButtons(Element))
+  else if TypeName = 'teGrid' then
+    Result := ThemeServices.GetElementDetails(TThemedGrid(Element))
+  else if TypeName = 'teHint' then
+    Result := ThemeServices.GetElementDetails(TThemedHint(Element))
+  else if TypeName = 'tePanel' then
+    Result := ThemeServices.GetElementDetails(TThemedPanel(Element))
+  else if TypeName = 'teTabSet' then
+    Result := ThemeServices.GetElementDetails(TThemedTabSet(Element))
+  else if TypeName = 'teTextLabel' then
+    Result := ThemeServices.GetElementDetails(TThemedTextLabel(Element))
+  else if TypeName = 'teMPlayerButtons' then
+    Result := ThemeServices.GetElementDetails(TThemedMPlayerButtons(Element))
+  else if TypeName = 'teToggleSwitch' then
+    Result := ThemeServices.GetElementDetails(TThemedToggleSwitch(Element))
+  else if TypeName = 'teSearchIndicators' then
+    Result := ThemeServices.GetElementDetails(TThemedSearchIndicators(Element))
   {$ENDIF}
   else
     raise Exception.Create('Unexpected type name ' + TypeName);
@@ -329,17 +381,17 @@ begin
     R := Rect(150,10, 150+16, 10+16);
     ThemeServices.DrawElement(PaintBox.Canvas.Handle, FDetails, R);
     if drawTxt then
-      ThemeServices.DrawText(PaintBox.Canvas.Handle, FDetails, '16x16', R, DT_CENTER or DT_VCENTER, 0);
+      ThemeServices.DrawText(PaintBox.Canvas.Handle, FDetails, '16x16', R, DT_CENTER or DT_VCENTER or DT_NOCLIP, 0);
 
     R := Rect(250, 10, 250+32, 10+32);
     ThemeServices.DrawElement(PaintBox.Canvas.Handle, FDetails, R);
     if drawTxt then
-      ThemeServices.DrawText(PaintBox.Canvas.Handle, FDetails, '32x32', R, DT_CENTER or DT_VCENTER, 0);
+      ThemeServices.DrawText(PaintBox.Canvas.Handle, FDetails, '32x32', R, DT_CENTER or DT_VCENTER or DT_NOCLIP, 0);
 
     R := Rect(350, 10, 350+64, 10+64);
     ThemeServices.DrawElement(PaintBox.Canvas.Handle, FDetails, R);
     if drawTxt then
-      ThemeServices.DrawText(PaintBox.Canvas.Handle, FDetails, '64x64', R, DT_CENTER or DT_VCENTER, 0);
+      ThemeServices.DrawText(PaintBox.Canvas.Handle, FDetails, '64x64', R, DT_CENTER or DT_VCENTER or DT_NOCLIP, 0);
   
     R := Rect(450, 10, 450+seCustomWidth.Value, 10+seCustomHeight.Value);
     ThemeServices.DrawElement(PaintBox.Canvas.Handle, FDetails, R);
