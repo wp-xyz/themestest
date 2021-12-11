@@ -1,0 +1,185 @@
+object MainForm: TMainForm
+  Left = 199
+  Height = 613
+  Top = 185
+  Width = 601
+  Caption = 'Themes Test'
+  ClientHeight = 613
+  ClientWidth = 601
+  Color = clBtnFace
+  OnCreate = FormCreate
+  LCLVersion = '2.3.0.0'
+  object Splitter1: TSplitter
+    Cursor = crVSplit
+    Left = 0
+    Height = 5
+    Top = 431
+    Width = 601
+    Align = alBottom
+    ResizeAnchor = akBottom
+  end
+  object Splitter3: TSplitter
+    Left = 461
+    Height = 431
+    Top = 0
+    Width = 5
+    Align = alRight
+    ResizeAnchor = akRight
+  end
+  object GroupBox1: TGroupBox
+    Left = 6
+    Height = 165
+    Top = 442
+    Width = 589
+    Align = alBottom
+    BorderSpacing.Around = 6
+    Caption = 'Preview'
+    ClientHeight = 145
+    ClientWidth = 585
+    TabOrder = 0
+    object PaintBox: TPaintBox
+      Left = 6
+      Height = 133
+      Top = 6
+      Width = 573
+      Align = alClient
+      BorderSpacing.Around = 6
+      OnPaint = PaintboxPaint
+    end
+  end
+  object Panel1: TPanel
+    Left = 6
+    Height = 419
+    Top = 6
+    Width = 449
+    Align = alClient
+    BorderSpacing.Around = 6
+    BevelOuter = bvNone
+    ClientHeight = 419
+    ClientWidth = 449
+    TabOrder = 1
+    object Splitter2: TSplitter
+      Left = 215
+      Height = 419
+      Top = 0
+      Width = 5
+    end
+    object lbMainItems: TListBox
+      Left = 0
+      Height = 419
+      Top = 0
+      Width = 215
+      Align = alLeft
+      ItemHeight = 0
+      OnClick = lbMainItemsClick
+      TabOrder = 0
+    end
+    object lbSubItems: TListBox
+      Left = 220
+      Height = 419
+      Top = 0
+      Width = 229
+      Align = alClient
+      ItemHeight = 0
+      OnClick = lbSubItemsClick
+      TabOrder = 1
+    end
+  end
+  object Panel2: TPanel
+    Left = 472
+    Height = 419
+    Top = 6
+    Width = 123
+    Align = alRight
+    BorderSpacing.Around = 6
+    BevelOuter = bvNone
+    ClientHeight = 419
+    ClientWidth = 123
+    TabOrder = 2
+    object Label4: TLabel
+      Left = 1
+      Height = 15
+      Top = 6
+      Width = 68
+      Caption = 'GetDetailSize'
+    end
+    object Label1: TLabel
+      Left = 2
+      Height = 15
+      Top = 104
+      Width = 67
+      Caption = 'Custom size:'
+    end
+    object Label2: TLabel
+      Left = 13
+      Height = 15
+      Top = 123
+      Width = 35
+      Caption = 'Width:'
+      Layout = tlCenter
+    end
+    object Label3: TLabel
+      Left = 13
+      Height = 15
+      Top = 151
+      Width = 39
+      Caption = 'Height:'
+      Layout = tlCenter
+    end
+    object cbWhiteBackground: TCheckBox
+      Left = 0
+      Height = 19
+      Top = 197
+      Width = 116
+      Caption = 'White background'
+      Checked = True
+      OnClick = cbDrawTextChange
+      State = cbChecked
+      TabOrder = 0
+    end
+    object edDetailSize: TEdit
+      Left = 1
+      Height = 23
+      Top = 25
+      Width = 122
+      Anchors = [akTop, akLeft, akRight]
+      ReadOnly = True
+      TabOrder = 1
+    end
+    object cbDrawText: TCheckBox
+      Left = 2
+      Height = 19
+      Top = 64
+      Width = 68
+      Caption = 'Draw text'
+      Checked = True
+      OnClick = cbDrawTextChange
+      State = cbChecked
+      TabOrder = 2
+    end
+    object seCustomHeight: TSpinEdit
+      Left = 70
+      Height = 23
+      Top = 148
+      Width = 53
+      Anchors = [akTop, akLeft, akRight]
+      MaxValue = 1000
+      MinValue = -1
+      OnChange = cbDrawTextChange
+      TabOrder = 3
+      Value = 100
+    end
+    object seCustomWidth: TSpinEdit
+      Left = 70
+      Height = 23
+      Top = 120
+      Width = 53
+      Anchors = [akTop, akLeft, akRight]
+      MaxValue = 1000
+      MinValue = -1
+      OnChange = cbDrawTextChange
+      TabOrder = 4
+      Value = 100
+    end
+  end
+end
