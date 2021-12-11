@@ -212,14 +212,15 @@ object Form1: TForm1
     Value = 100
   end
   object cbWhiteBackground: TCheckBox
+    AnchorSideLeft.Control = edDetailSize
     AnchorSideTop.Control = seCustomHeight
     AnchorSideTop.Side = asrBottom
     AnchorSideRight.Control = edDetailSize
     AnchorSideRight.Side = asrBottom
-    Left = 464
+    Left = 463
     Height = 16
     Top = 165
-    Width = 141
+    Width = 142
     Anchors = [akTop, akLeft, akRight]
     AutoSize = False
     BorderSpacing.Top = 12

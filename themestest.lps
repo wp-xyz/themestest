@@ -8,8 +8,7 @@
       <Unit0>
         <Filename Value="themestest.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
-        <CursorPos X="63" Y="17"/>
+        <CursorPos X="51" Y="10"/>
         <UsageCount Value="41"/>
         <Loaded Value="True"/>
       </Unit0>
@@ -19,6 +18,7 @@
         <ComponentName Value="Form1"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <TopLine Value="136"/>
         <CursorPos X="47" Y="148"/>
