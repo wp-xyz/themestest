@@ -75,62 +75,110 @@ end;
 
 function GetTI(TypeName: string): PTypeInfo;
 begin
-  case TypeName of
-    'teButton': Result := TypeInfo(TThemedButton);
-    'teClock': Result := TypeInfo(TThemedClock);
-    'teComboBox': Result := TypeInfo(TThemedComboBox);
-    'teEdit': Result := TypeInfo(TThemedEdit);
-    'teExplorerBar': Result := TypeInfo(TThemedExplorerBar);
-    'teHeader': Result := TypeInfo(TThemedHeader);
-    'teListView': Result := TypeInfo(TThemedListView);
-    'teMenu': Result := TypeInfo(TThemedMenu);
-    'tePage': Result := TypeInfo(TThemedPage);
-    'teProgress': Result := TypeInfo(TThemedProgress);
-    'teRebar': Result := TypeInfo(TThemedRebar);
-    'teScrollBar': Result := TypeInfo(TThemedScrollBar);
-    'teSpin': Result := TypeInfo(TThemedSpin);
-    'teStartPanel': Result := TypeInfo(TThemedStartPanel);
-    'teStatus': Result:= TypeInfo(TThemedStatus);
-    'teTab': Result := TypeInfo(TThemedTab);
-    'teTaskBand': Result := TypeInfo(TThemedTaskBand);
-    'teTaskBar': Result := TypeInfo(TThemedTaskBar);
-    'teToolBar': Result := TypeInfo(TThemedToolBar);
-    'teToolTip': Result := TypeInfo(TThemedToolTip);
-    'teTrackBar': Result := TypeInfo(TThemedTrackBar);
-    'teTrayNotify': Result := TypeInfo(TThemedTrayNotify);
-    'teTreeview': Result := TypeInfo(TThemedTreeview);
-    'teWindow': Result := TypeInfo(TThemedWindow);
-  end;
+  if TypeName = 'teButton' then 
+    Result := TypeInfo(TThemedButton)
+  else if TypeName = 'teClock' then
+    Result := TypeInfo(TThemedClock)
+  else if TypeName = 'teComboBox' then 
+    Result := TypeInfo(TThemedComboBox)
+  else if TypeName = 'teEdit' then
+    Result := TypeInfo(TThemedEdit)
+  else if TypeName = 'teExplorerBar' then 
+    Result := TypeInfo(TThemedExplorerBar)
+  else if TypeName = 'teHeader' then
+    Result := TypeInfo(TThemedHeader)
+  else if TypeName = 'teListView' then 
+    Result := TypeInfo(TThemedListView)
+  else if TypeName = 'teMenu' then
+    Result := TypeInfo(TThemedMenu)
+  else if TypeName = 'tePage' then
+    Result := TypeInfo(TThemedPage)
+  else if TypeName = 'teProgress' then
+    Result := TypeInfo(TThemedProgress)
+  else if TypeName = 'teRebar' then
+    Result := TypeInfo(TThemedRebar)
+  else if TypeName = 'teScrollBar' then 
+    Result := TypeInfo(TThemedScrollBar)
+  else if TypeName = 'teSpin' then
+    Result := TypeInfo(TThemedSpin)
+  else if TypeName = 'teStartPanel' then 
+    Result := TypeInfo(TThemedStartPanel)
+  else if TypeName = 'teStatus' then
+    Result:= TypeInfo(TThemedStatus)
+  else if TypeName = 'teTab' then
+    Result := TypeInfo(TThemedTab)
+  else if TypeName = 'teTaskBand' then
+    Result := TypeInfo(TThemedTaskBand)
+  else if TypeName = 'teTaskBar' then
+    Result := TypeInfo(TThemedTaskBar)
+  else if TypeName = 'teToolBar' then
+    Result := TypeInfo(TThemedToolBar)
+  else if TypeName = 'teToolTip' then
+    Result := TypeInfo(TThemedToolTip)
+  else if TypeName = 'teTrackBar' then
+    Result := TypeInfo(TThemedTrackBar)
+  else if TypeName = 'teTrayNotify' then
+    Result := TypeInfo(TThemedTrayNotify)
+  else if TypeName = 'teTreeview' then
+    Result := TypeInfo(TThemedTreeview)
+  else if TypeName = 'teWindow' then
+    Result := TypeInfo(TThemedWindow)
+  else
+    Result := nil;
 end;
 
 function GetTDetail(TypeName: string; Element: integer): TThemedElementDetails;
 begin
-  case TypeName of
-    'teButton': Result := ThemeServices.GetElementDetails(TThemedButton(Element));
-    'teClock': Result := ThemeServices.GetElementDetails(TThemedClock(Element));
-    'teComboBox': Result := ThemeServices.GetElementDetails(TThemedComboBox(Element));
-    'teEdit': Result := ThemeServices.GetElementDetails(TThemedEdit(Element));
-    'teExplorerBar': Result := ThemeServices.GetElementDetails(TThemedExplorerBar(Element));
-    'teHeader': Result := ThemeServices.GetElementDetails(TThemedHeader(Element));
-    'teListView': Result := ThemeServices.GetElementDetails(TThemedListView(Element));
-    'teMenu': Result := ThemeServices.GetElementDetails(TThemedMenu(Element));
-    'tePage': Result := ThemeServices.GetElementDetails(TThemedPage(Element));
-    'teProgress': Result := ThemeServices.GetElementDetails(TThemedProgress(Element));
-    'teRebar': Result := ThemeServices.GetElementDetails(TThemedRebar(Element));
-    'teScrollBar': Result := ThemeServices.GetElementDetails(TThemedScrollBar(Element));
-    'teSpin': Result := ThemeServices.GetElementDetails(TThemedSpin(Element));
-    'teStartPanel':result:=ThemeServices.GetElementDetails(TThemedStartPanel(Element));
-    'teStatus': Result := ThemeServices.GetElementDetails(TThemedStatus(Element));
-    'teTab': Result := ThemeServices.GetElementDetails(TThemedTab(Element));
-    'teTaskBand': Result := ThemeServices.GetElementDetails(TThemedTaskBand(Element));
-    'teTaskBar': Result := ThemeServices.GetElementDetails(TThemedTaskBar(Element));
-    'teToolBar': Result := ThemeServices.GetElementDetails(TThemedToolBar(Element));
-    'teToolTip': Result := ThemeServices.GetElementDetails(TThemedToolTip(Element));
-    'teTrackBar': Result := ThemeServices.GetElementDetails(TThemedTrackBar(Element));
-    'teTrayNotify': Result := ThemeServices.GetElementDetails(TThemedTrayNotify(Element));
-    'teTreeview': Result := ThemeServices.GetElementDetails(TThemedTreeview(Element));
-    'teWindow': Result := ThemeServices.GetElementDetails(TThemedWindow(Element));
-  end;
+  if TypeName = 'teButton' then
+    Result := ThemeServices.GetElementDetails(TThemedButton(Element))
+  else if TypeName = 'teClock' then
+    Result := ThemeServices.GetElementDetails(TThemedClock(Element))
+  else if TypeName = 'teComboBox' then
+    Result := ThemeServices.GetElementDetails(TThemedComboBox(Element))
+  else if TypeName = 'teEdit' then
+    Result := ThemeServices.GetElementDetails(TThemedEdit(Element))
+  else if TypeName = 'teExplorerBar' then
+    Result := ThemeServices.GetElementDetails(TThemedExplorerBar(Element))
+  else if TypeName = 'teHeader' then
+    Result := ThemeServices.GetElementDetails(TThemedHeader(Element))
+  else if TypeName = 'teListView' then
+    Result := ThemeServices.GetElementDetails(TThemedListView(Element))
+  else if TypeName = 'teMenu' then
+    Result := ThemeServices.GetElementDetails(TThemedMenu(Element))
+  else if TypeName = 'tePage' then 
+    Result := ThemeServices.GetElementDetails(TThemedPage(Element))
+  else if TypeName = 'teProgress' then
+    Result := ThemeServices.GetElementDetails(TThemedProgress(Element))
+  else if TypeName = 'teRebar' then 
+    Result := ThemeServices.GetElementDetails(TThemedRebar(Element))
+  else if TypeName = 'teScrollBar' then 
+    Result := ThemeServices.GetElementDetails(TThemedScrollBar(Element))
+  else if TypeName = 'teSpin' then
+    Result := ThemeServices.GetElementDetails(TThemedSpin(Element))
+  else if TypeName = 'teStartPanel' then 
+    Result := ThemeServices.GetElementDetails(TThemedStartPanel(Element))
+  else if TypeName = 'teStatus' then  
+    Result := ThemeServices.GetElementDetails(TThemedStatus(Element))
+  else if TypeName = 'teTab' then
+    Result := ThemeServices.GetElementDetails(TThemedTab(Element))
+  else if TypeName = 'teTaskBand' then 
+    Result := ThemeServices.GetElementDetails(TThemedTaskBand(Element))
+  else if TypeName = 'teTaskBar' then 
+    Result := ThemeServices.GetElementDetails(TThemedTaskBar(Element))
+  else if TypeName = 'teToolBar' then 
+    Result := ThemeServices.GetElementDetails(TThemedToolBar(Element))
+  else if TypeName = 'teToolTip' then 
+    Result := ThemeServices.GetElementDetails(TThemedToolTip(Element))
+  else if TypeName = 'teTrackBar' then 
+    Result := ThemeServices.GetElementDetails(TThemedTrackBar(Element))
+  else if TypeName = 'teTrayNotify' then 
+    Result := ThemeServices.GetElementDetails(TThemedTrayNotify(Element))
+  else if TypeName = 'teTreeview' then
+    Result := ThemeServices.GetElementDetails(TThemedTreeview(Element))
+  else if TypeName = 'teWindow' then
+    Result := ThemeServices.GetElementDetails(TThemedWindow(Element))
+  else
+    raise Exception.Create('Unexpected type name ' + TypeName);
 end;
 
 procedure TForm1.SelectMainItem(Sender: TObject; User: boolean);
@@ -162,7 +210,7 @@ var
 begin
   if cbWhiteBackground.Checked then
   begin
-    clr:= PaintBox.Canvas.Brush.Color;
+    clr := PaintBox.Canvas.Brush.Color;
     PaintBox.Canvas.Brush.Color := clWhite;
     PaintBox.Canvas.FillRect(0, 0, Paintbox.Width, Paintbox.Height);
     PaintBox.Canvas.Brush.Color := clr;

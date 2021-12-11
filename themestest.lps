@@ -20,8 +20,8 @@
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="136"/>
-        <CursorPos X="47" Y="148"/>
+        <TopLine Value="72"/>
+        <CursorPos X="27" Y="93"/>
         <UsageCount Value="41"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -120,7 +120,7 @@
         <Loaded Value="True"/>
       </Unit15>
     </Units>
-    <JumpHistory Count="26" HistoryIndex="25">
+    <JumpHistory Count="28" HistoryIndex="27">
       <Position1>
         <Filename Value="umainform.pas"/>
       </Position1>
@@ -223,6 +223,14 @@
         <Filename Value="umainform.pas"/>
         <Caret Line="36" Column="52" TopLine="13"/>
       </Position26>
+      <Position27>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="123" Column="5" TopLine="117"/>
+      </Position27>
+      <Position28>
+        <Filename Value="umainform.pas"/>
+        <Caret Line="108" Column="14" TopLine="89"/>
+      </Position28>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
